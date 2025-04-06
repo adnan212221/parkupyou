@@ -1,0 +1,110 @@
+// .contactformdiv{
+//     position: relative;
+//     top: 15rem;
+
+//     .parksmarter{
+//         display: flex;
+//         justify-content: center;
+
+//         h2{
+//             span{
+//                 color: #EDBF2B;
+//             }
+//         }
+//     }
+// }
+
+.contact-section {
+    background-color: #0d0221;
+    padding: 4rem 0;
+    color: white;
+  
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-align: center;
+  
+      .highlight {
+        color: #f1c40f;
+      }
+    }
+  
+    .contact-box {
+      margin-top: 2rem;
+    }
+  
+    .form-card {
+      background-color: #f1c40f;
+      padding: 2rem;
+      border-radius: 8px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+      h4 {
+        font-weight: 700;
+        color: #000;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+  
+      .form-control {
+        background-color: #0d0221;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+  
+        &::placeholder {
+          color: #ccc;
+        }
+      }
+  
+      .submit-btn {
+        background-color: #0d0221;
+        color: #f1c40f;
+        border: none;
+        padding: 0.5rem 2rem;
+        border-radius: 30px;
+        font-weight: 600;
+        margin: 0 auto;
+        display: block;
+  
+        &:hover {
+          background-color: #1c1033;
+        }
+      }
+    }
+  
+    .image-wrapper {
+      height: 100%;
+      padding-left: 2rem;
+  
+      img.contact-img {
+        height: 100%;
+        width: 66%;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+    }
+  
+    @media (max-width: 767px) {
+      .image-wrapper {
+        padding-left: 0;
+        padding-top: 1.5rem;
+  
+        img.contact-img {
+          height: auto;
+          max-height: 300px;
+          width: 100%;
+        }
+      }
+  
+      .form-card {
+        padding: 1.5rem;
+      }
+    }
+  }
+  

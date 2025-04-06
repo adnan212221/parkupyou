@@ -1,0 +1,113 @@
+// .headingsection{
+//     h1 {
+//         color: white;
+//     }
+//     h5{
+//         color: white;
+//     }
+//     span {
+//         color: #EDBF2B;
+//     }
+// }
+
+// .buttoncard{
+//     position: absolute;
+//     bottom: 5rem;
+//     left: 5rem;
+    
+//     button {
+//         padding: 10px 40px;
+//         color: #EDBF2B;
+//         font-weight: bolder;
+//         background-color: #0B0323 !important;
+//     }
+// }
+
+// .text-white.card{
+//     border-radius: 25px;
+// }
+
+// .headingsection{
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     padding-top: 30px;
+//     padding-bottom: 100px;
+// }
+
+// .middlecard{
+//     position: relative;
+//     top: -40px;
+// }
+
+// .learnmorebutton{
+//     position: absolute;
+//     left: 47%;
+//     background-color: #EDBF2B;
+//     color: #0B0323 !important;
+//     padding: 10px 30px;
+//     border-radius: 15px;
+//     margin-top: 40px;
+// }
+
+
+.services-section {
+    background-color: #0d0221;
+    color: #fff;
+    padding: 4rem 0;
+  
+    .title {
+      font-weight: bold;
+      font-size: 2rem;
+  
+      .highlight {
+        color: #f1c40f;
+      }
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      color: #ccc;
+    }
+  
+    .service-card {
+      background-color: transparent;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      position: relative;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+  
+      .service-img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        display: block;
+      }
+  
+      .service-title {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 12px 10px;
+        text-align: center;
+        font-weight: 600;
+        background-color: #0d0221;
+        color: #f1c40f;
+        font-size: 0.95rem;
+      }
+    }
+  
+    .cta-btn {
+      font-weight: 600;
+      padding: 10px 30px;
+      border-radius: 6px;
+    }
+  }
+  

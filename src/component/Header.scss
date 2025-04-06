@@ -1,0 +1,14 @@
+.headerclass{
+    background-color: #EDBF2B !important;
+}
+
+.navbar-nav{
+    gap: 40px;
+    .nav-link{
+        color: #0B0323 !important;
+    }
+
+    .nav-link.active{
+        font-weight: bolder;
+    }
+}
