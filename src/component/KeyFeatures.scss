@@ -1,0 +1,48 @@
+.key-features {
+    background-color: #0a0826; // dark background
+    color: white;
+  
+    h2 {
+      font-weight: bold;
+      font-size: 2rem;
+  
+      .highlight {
+        color: #f1c40f; // yellow color
+      }
+    }
+  
+    .feature-box {
+      background-color: #f1c40f;
+      color: #000;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+  
+      .feature-title {
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+  
+      .feature-description {
+        font-size: 0.95rem;
+      }
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .key-features {
+      h2 {
+        font-size: 1.5rem;
+      }
+  
+      .feature-box {
+        padding: 1.5rem 1rem;
+      }
+    }
+  }
+  

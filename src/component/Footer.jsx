@@ -8,7 +8,7 @@ import '../component/footer.scss'
 
 const Footer = () => {
   return (
-    <div className='footersection'>
+    <div id='about' className='footersection'>
 
 <footer>
       {/* Main Footer Section */}

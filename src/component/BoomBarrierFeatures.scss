@@ -1,0 +1,44 @@
+.boom-barrier-features {
+    background-color: #0a0826;
+    color: #fff;
+  
+    .title {
+      font-weight: bold;
+      color: #f1c40f;
+      font-size: 2rem;
+    }
+  
+    .feature-card {
+      background-color: #f1c40f;
+      color: #0a0826;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+  
+      .feature-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+  
+      .feature-description {
+        font-size: 0.95rem;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .title {
+        font-size: 1.5rem;
+      }
+      .feature-title {
+        font-size: 1.1rem;
+      }
+      .feature-description {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  

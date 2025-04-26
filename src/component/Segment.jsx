@@ -116,7 +116,7 @@ const Segment = () => {
     //     </div>
     // </div>
 
-    <div className="segments-section">
+    <div id="segment" className="segments-section">
       <Container>
         <h2 className="text-center section-title">Segments</h2>
         <p className="text-center section-subtitle">

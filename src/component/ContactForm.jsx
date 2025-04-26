@@ -1,64 +1,53 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import formimg from '../assets/formimg.png'
-import '../component/Contactform.scss'
+import formimg from '../assets/formimg.png';
+import '../component/Contactform.scss';
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    mobile: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSe9jruAwtlKOcPxpb00z7rVU9BP1V_X1NPwY_6Q923o_QgP3g/formResponse";
+
+    const formBody = new FormData();
+    formBody.append('entry.1923783504', formData.name);   // Name field
+    formBody.append('entry.511648640', formData.mobile);   // Mobile Number field
+    formBody.append('entry.1509634895', formData.email);   // Email field
+    formBody.append('entry.1128434652', formData.message); // Message field
+
+    fetch(formUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formBody
+    })
+    .then(() => {
+      alert('Form submitted successfully!');
+      setFormData({ name: '', mobile: '', email: '', message: '' });
+    })
+    .catch((error) => {
+      console.error('Error!', error.message);
+    });
+  };
+
   return (
-    // <div className='contactformdiv'>
-    //     <div className='parksmarter'>
-    //         <h2>We're Here to Help You <span>Park Smarter</span></h2>
-    //     </div>
-
-    //     <div style={{ backgroundColor: '#0d0221', minHeight: '100vh', padding: '2rem' }}>
-    //   <Container className="d-flex justify-content-center align-items-center">
-    //     <Row className="w-100" style={{ maxWidth: '900px' }}>
-    //       {/* Form Section */}
-    //       <Col md={6} style={{ backgroundColor: '#f1c40f', borderRadius: '10px', padding: '2rem' }}>
-    //         <h3 className="text-center mb-4" style={{ fontWeight: 'bold' }}>Contact Us</h3>
-    //         <Form>
-    //           <Form.Group controlId="formName" className="mb-3">
-    //             <Form.Control type="text" placeholder="Enter Name" className="bg-dark text-white border-0" />
-    //           </Form.Group>
-
-    //           <Form.Group controlId="formMobile" className="mb-3">
-    //             <Form.Control type="text" placeholder="Enter Mobile Number" className="bg-dark text-white border-0" />
-    //           </Form.Group>
-
-    //           <Form.Group controlId="formEmail" className="mb-3">
-    //             <Form.Control type="email" placeholder="Enter Email" className="bg-dark text-white border-0" />
-    //           </Form.Group>
-
-    //           <Form.Group controlId="formMessage" className="mb-3">
-    //             <Form.Control as="textarea" rows={4} placeholder="Enter Your Message" className="bg-dark text-white border-0" />
-    //           </Form.Group>
-
-    //           <div className="text-center">
-    //             <Button variant="dark" style={{ borderRadius: '20px', padding: '0.5rem 2rem', fontWeight: 'bold' }}>
-    //               Submit
-    //             </Button>
-    //           </div>
-    //         </Form>
-    //       </Col>
-
-    //       {/* Image Section */}
-    //       <Col md={6} className="d-flex align-items-center justify-content-center mt-4 mt-md-0">
-    //         <img
-    //           src={formimg} // Replace with actual image path
-    //           alt="Contact Support"
-    //           className="img-fluid rounded"
-    //           style={{ maxHeight: '450px' }}
-    //         />
-    //       </Col>
-    //     </Row>
-    //   </Container>
-    // </div>
-    // </div>
-
     <section className="contact-section">
       <Container>
         <h2>
@@ -69,12 +58,41 @@ const ContactForm = () => {
             <Col md={7}>
               <div className="form-card">
                 <h4>Contact Us</h4>
-                <Form>
-                  <Form.Control type="text" placeholder="Enter Name" />
-                  <Form.Control type="text" placeholder="Enter Mobile Number" />
-                  <Form.Control type="email" placeholder="Enter Email" />
-                  <Form.Control as="textarea" rows={4} placeholder="Enter Your Message" />
-                  <Button className="submit-btn mt-3">Submit</Button>
+                <Form onSubmit={handleSubmit}>
+                  <Form.Control 
+                    type="text" 
+                    name="name"
+                    placeholder="Enter Name" 
+                    value={formData.name} 
+                    onChange={handleChange} 
+                    required
+                  />
+                  <Form.Control 
+                    type="text" 
+                    name="mobile"
+                    placeholder="Enter Mobile Number" 
+                    value={formData.mobile} 
+                    onChange={handleChange} 
+                    required
+                  />
+                  <Form.Control 
+                    type="email" 
+                    name="email"
+                    placeholder="Enter Email" 
+                    value={formData.email} 
+                    onChange={handleChange} 
+                    required
+                  />
+                  <Form.Control 
+                    as="textarea" 
+                    rows={4} 
+                    name="message"
+                    placeholder="Enter Your Message" 
+                    value={formData.message} 
+                    onChange={handleChange} 
+                    required
+                  />
+                  <Button type="submit" className="submit-btn mt-3">Submit</Button>
                 </Form>
               </div>
             </Col>
@@ -87,7 +105,7 @@ const ContactForm = () => {
         </div>
       </Container>
     </section>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;
