@@ -48,7 +48,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="contact-section">
+    <section className="contact-section" id='contact'>
       <Container>
         <h2>
           We're Here to Help You <span className="highlight">Park Smarter</span>
