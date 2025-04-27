@@ -16,8 +16,11 @@
     }
   
     .segment-row {
-      gap: 15px;
       margin-bottom: 2.5rem;
+
+      @media (max-width: 767px) {
+        gap: 15px;
+      }
     }
   
     .segment-card {
