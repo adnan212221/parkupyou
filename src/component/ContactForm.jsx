@@ -25,13 +25,13 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSe9jruAwtlKOcPxpb00z7rVU9BP1V_X1NPwY_6Q923o_QgP3g/formResponse";
+    const formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfyKvCDgzOtcLu3YvJB6DtCPu1ffGTpgCNQkIqhgYrjoywHaw/formResponse";
 
     const formBody = new FormData();
-    formBody.append('entry.1923783504', formData.name);   // Name field
-    formBody.append('entry.511648640', formData.mobile);   // Mobile Number field
-    formBody.append('entry.1509634895', formData.email);   // Email field
-    formBody.append('entry.1128434652', formData.message); // Message field
+    formBody.append('entry.1249447031', formData.name);   // Name field
+    formBody.append('entry.1862604955', formData.mobile);   // Mobile Number field
+    formBody.append('entry.1557018765', formData.email);   // Email field
+    formBody.append('entry.1641559227', formData.message); // Message field
 
     fetch(formUrl, {
       method: 'POST',
