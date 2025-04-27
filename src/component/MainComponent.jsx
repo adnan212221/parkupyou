@@ -43,7 +43,7 @@ const MainComponent = () => {
               {/* Add pseudo-stack effect if needed */}
               <div style={{
                 position: 'absolute',
-                // display: 'none',
+                display: 'none',
                 top: '20px',
                 left: '20px',
                 width: '100%',
