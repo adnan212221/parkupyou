@@ -42,8 +42,8 @@ const Footer = () => {
             <Col md={4}>
               <h6 className="fw-bold mb-3">Contact</h6>
               <p className="mb-1"><strong>Mohd Yousuf</strong></p>
-              <p className="mb-1"><Telephone className="me-2" />+91 9175097028</p>
-              <p><Envelope className="me-2" />shaikhyousuf1998@gmail.com</p>
+              <p className="mb-1"><Telephone className="me-2" />+91 8552931884</p>
+              <p><Envelope className="me-2" />neopark2025@gmail.com</p>
             </Col>
           </Row>
         </Container>

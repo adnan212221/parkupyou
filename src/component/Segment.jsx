@@ -119,6 +119,7 @@ const Segment = () => {
     <div id="segment" className="segments-section">
       <Container>
         <h2 className="text-center section-title">Segments</h2>
+        <h2 className="text-center section-title comingsoon">( Coming Soon ! )</h2>
         <p className="text-center section-subtitle">
           Customized Parking Solutions for Every Space with NeoPark
         </p>

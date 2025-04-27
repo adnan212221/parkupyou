@@ -9,25 +9,6 @@ import image1 from '../assets/image1.png'
 const MainComponent = () => {
   return (
     <>
- {/* <Container className='main-comp'>
-      <Row>
-        <Col sm={8}>
-        <div className='firstcomponent'>
-            <h1 className='mainHeading'>Find, Reserve & Park</h1>
-            <h1 className='subheading'>All In One Place</h1>
-        </div>
-        <div className='secondsubhead'>
-            <h4 className='subwelcome'>Welcome to <span>NeoPark</span></h4>
-            <p>At NeoPark, we are revolutionizing parking management by seamlessly integrating cutting-edge parking solutions with advanced technology. Our innovative parking management and guidance systems make parking both easy and secure for individuals, businesses, and organizations alike. Through our user-friendly app, you can simplify and streamline your parking experience, making it easier than ever to find, reserve, and access parking spaces. We are committed to providing efficient services that not only simplify parking but also enhance the overall experience for our clients and their customers.</p>
-        </div>
-        <Button variant="warning">Learn More</Button>
-        </Col>
-        <Col sm={4}>
-        <img className='carimage1' src={image1} alt="image1"/>
-        </Col>
-      </Row>
-    </Container> */}
-
 <div style={{ backgroundColor: '#0d0221', color: '#fff', padding: '4rem 0' }}>
       <Container>
         <Row className="align-items-center">
@@ -41,7 +22,7 @@ const MainComponent = () => {
             <p style={{ lineHeight: '1.8', fontSize: '15px' }}>
               At NeoPark, we are revolutionizing parking management by seamlessly integrating cutting-edge parking solutions with advanced technology. Our innovative parking management and guidance systems make parking both easy and secure for individuals, businesses, and organizations alike.
               <br /><br />
-              Through our user-friendly app, you can simplify and streamline your parking experience, making it easier than ever to find, reserve, and access parking spaces. We are committed to providing efficient services that not only simplify parking but also enhance the overall experience for our clients and their customers.
+              Through our user-friendly app, you can simplify and streamline your parking experience, making it easier than ever to <span style={{ color: '#f1c40f', fontWeight: 'bold' }}>Find, Reserve, and Access parking spaces.</span> We are committed to providing efficient services that not only simplify parking but also enhance the overall experience for our clients and their customers.
             </p>
             <Button variant="warning" className="mt-3 fw-semibold px-4 py-2">
               Learn More

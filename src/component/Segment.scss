@@ -1,35 +1,3 @@
-// .segmentdiv{
-//     position: relative;
-//     top: 10rem;
-
-//     .segmenttext{
-//         display: flex;
-//         justify-content: center;
-//         color: #EDBF2B;
-//         align-items: center;
-//         flex-direction: column;
-//         padding-right: 10%;
-//         padding-bottom: 3%;
-//     }
-// }
-
-// .card.cardsegment{
-//     // width: 641px !important;
-//     background-color: #EDBF2B;
-//     border-radius: 0 50px;
-
-//     .card-body.cardbodysegment{
-//         display: flex;
-//         align-items: center;
-//         flex-direction: column;
-//         padding: 20px 80px;
-//     }
-// }
-
-// .cardsegment1{
-//     border-radius: 50px 0;
-// }
-
 .segments-section {
     background-color: #0d0221;
     color: white;
@@ -95,5 +63,18 @@
         margin-bottom: 1rem;
       }
     }
+  }
+
+  .comingsoon{
+    color: #f1c40f;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes example {
+    from {color: #f1c40f;}
+    to {color:white;}
   }
   
